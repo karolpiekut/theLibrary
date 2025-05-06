@@ -1,0 +1,18 @@
+{
+  "name": "thelibrary",
+  "version": "1.0.0",
+  "description": "PostgreSQL Library App",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Karol Piekut",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
