@@ -10,6 +10,10 @@
     width: 192px;
     height: 720px;
     background: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 #appMainView {
@@ -22,4 +26,30 @@ button {
     width: 190px;
     height: 50px;
     /*border: none;*/
+}
+
+#buttonsSection, #addBooksSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#buttonsSection {
+    padding-top: 1px;
+}
+#addBooksButton {
+    display: block;
+    position: absolute;
+    top: 677px;
+    left: 9px;
+}
+
+#addBooksButton:hover {
+    background: #ffaa2e;
+    border: none;
+}
+
+#addBooksButton:active {
+    background: rgb(239, 239, 239);
 }

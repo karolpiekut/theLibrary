@@ -1,5 +1,7 @@
 import './style.css'
 
+let id = 0;
+
 function generateApp() {
     const app = document.createElement('div');
     app.setAttribute('id', 'app');
@@ -42,12 +44,17 @@ function generateApp() {
     readBooksButton.innerText = 'Read Books';
     buttonsSection.appendChild(readBooksButton);
 
-
-
+    const addBooksSection = document.createElement('div')
+    addBooksSection.setAttribute('id', 'addBooksSection');
+    menuBar.appendChild(addBooksSection);
     const addBooksButton = document.createElement('button');
     addBooksButton.setAttribute('id', 'addBooksButton');
     addBooksButton.innerText = 'Add a book';
-    menuBar.appendChild(addBooksButton);
+    addBooksSection.appendChild(addBooksButton);
+
+    const dataTable = document.createElement('table');
+    dataTable.setAttribute('id', 'dataTable');
+    appMainView.appendChild(dataTable);
 
 
 
@@ -58,4 +65,45 @@ function generateApp() {
     return app;
 }
 
+
+//stop  multiple append headers!!!
+function diplayTableHeaderAll() {
+    let selectTable = document.querySelector('#dataTable');
+    const tableHeaderBookId = document.createElement('th');
+    tableHeaderBookId.setAttribute('id', 'tableHeaderBookId');
+    tableHeaderBookId.innerText = 'book id';
+    selectTable.appendChild(tableHeaderBookId);
+}
+
+
+
+
+/*
+function createEntryRows() {
+    const tableRow = document.createElement("tr");
+    tableRow.setAttribute("id", "entryRow");
+
+    const tableDataFieldId = document.createElement("td");
+    tableDataFieldId.setAttribute("id", `fieldId${id}`);
+    tableDataFieldId.innerText = `${id}`;
+
+    const tableDataFieldCode = document.createElement("td");
+    tableDataFieldCode.setAttribute("id", `fieldCode${id}`);
+    tableDataFieldCode.innerText = "nil";
+
+    const tableRowFieldName = document.createElement("td");
+    tableRowFieldName.setAttribute("id", `fieldName${id}`);
+    tableRowFieldName.innerText = "nil";
+
+    fieldEntryTable.append(tableRow);
+    tableRow.append(tableDataFieldId);
+    tableRow.append(tableDataFieldCode);
+    tableRow.append(tableRowFieldName);
+    id++;
+}
+*/
+
 document.body.appendChild(generateApp());
+
+const allButon = document.querySelector('#allButton');
+allButon.addEventListener('click', diplayTableHeaderAll);
