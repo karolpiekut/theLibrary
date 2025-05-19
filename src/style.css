@@ -44,12 +44,4 @@ button {
     top: 677px;
     left: 9px;
 }
-
-#addBooksButton:hover {
-    background: #ffaa2e;
-    border: none;
-}
-
-#addBooksButton:active {
-    background: rgb(239, 239, 239);
-}
+ 
